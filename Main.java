@@ -1,21 +1,27 @@
 import java.util.Scanner;
-public class Main{
 
-   
+public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("wprowadz swoj wiek");
-        
-        int age = scanner.nextInt();
+        System.out.println("ile punktow z testu");
 
-        if (age < 18){
-            System.out.println("jestes niepelnoletni");
+        int pkt = scanner.nextInt();
+
+        if (pkt >= 90 && pkt < 100){
+            System.out.println("Ocena A");
         }
-
-        else if (age >= 18){
-            System.out.println("jestes pelnoletni");
+        else if (pkt >= 80 && pkt < 89){
+            System.out.println("Ocena B");
         }
-        scanner.close();
-
+        else if (pkt >= 70 && pkt < 79){
+            System.out.println("Ocena C");
+        }
+        else if ( pkt >= 60 && pkt < 69){
+            System.out.println("Ocena D");
+        }
+        else if ( pkt < 60){
+            System.out.println("Ocena F");
+        }
     }
 }
